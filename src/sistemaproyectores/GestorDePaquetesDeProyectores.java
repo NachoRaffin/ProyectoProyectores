@@ -31,4 +31,13 @@ public class GestorDePaquetesDeProyectores {
     void agregarPaquete(PaqueteProyectores paqueteNuevo){
         paquetes.add(paqueteNuevo);
     }
+    
+   PaqueteProyectores buscarPaqueteDeProyectores(int codPaq){
+    for(int i=0;i<=paquetes.size();i++){
+    if(codPaq==paquetes.get(i).getCodPaquete()){
+    return paquetes.get(i);
+    }
+    }
+    return null;
+   }
 }
